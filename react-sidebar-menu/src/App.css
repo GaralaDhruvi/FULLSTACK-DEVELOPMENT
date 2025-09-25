@@ -1,0 +1,196 @@
+/* Global Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* App Layout */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Sidebar Toggle */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 3;
+  transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  background-color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #4005f0;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  padding-top: 120px;
+  z-index: 2;
+}
+
+.sidebar.open {
+  width: 220px;
+}
+
+.sidebar-button {
+  display: block;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  margin: 12px 25px;
+  padding: 12px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.sidebar-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content Area */
+.content {
+  margin-left: 60px;
+  padding: 40px;
+  flex-grow: 1;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.open ~ .content {
+  margin-left: 220px;
+}
+
+/* Home Banner */
+.home-image-wrapper {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Charusat Gallery */
+.charusat-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 30px 40px;
+  background-color: #f4f4f4;
+}
+
+.image-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.image-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.image-card p {
+  margin: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Course Section Layout */
+.course-grid-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #f7f7f7;
+}
+
+.course-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+/* This section centers a single course card like in "CSE" */
+.course-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-color: #f7f7f7;
+}
+
+/* Shared card style */
+.course-card {
+  background-color: #ffffff;
+  padding: 24px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.course-card h3 {
+  margin-bottom: 12px;
+  color: #1a1a1a;
+  font-size: 18px;
+}
+
+.course-card p {
+  margin: 6px 0;
+  color: #444;
+}
+
+.label {
+  font-weight: bold;
+}

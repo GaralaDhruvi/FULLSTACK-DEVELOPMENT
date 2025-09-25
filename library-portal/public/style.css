@@ -1,0 +1,142 @@
+/* General Styling */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    color: #333;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Card */
+.card {
+    background: #ffffff;
+    color: #333;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    width: 100%;
+    max-width: 380px;
+    min-width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Headings */
+h1 {
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    color: #fff;
+    text-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #6a11cb;
+}
+
+/* Input Fields */
+input[type="text"], input[type="password"], input[type="email"] {
+    padding: 14px;
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+    font-size: 16px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.3);
+}
+
+/* Buttons */
+button, .btn {
+    padding: 14px 20px;
+    width: 100%;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button:hover, .btn:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Error Card */
+.error {
+    border-left: 6px solid red;
+    padding: 25px;
+    text-align: left;
+    background: #ffe6e6;
+    color: #b00000;
+    font-weight: 500;
+}
+
+/* Profile Info */
+.card p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+    .card {
+        padding: 30px 20px;
+        min-width: 280px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+}
+
+/* Extra Polished Touch: Gradient background animation */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(-45deg, #6a11cb, #2575fc, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* Apply box-sizing globally */
+* {
+    box-sizing: border-box;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

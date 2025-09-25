@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Portal - Resume Upload</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <h1>Upload Your Resume</h1>
+      <p>Please upload only PDF files (max 2MB)</p>
+
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="resume" required />
+        <button type="submit">Upload</button>
+      </form>
+
+      <% if (message) { %>
+        <div class="success"><%= message %></div>
+      <% } %>
+
+      <% if (error) { %>
+        <div class="error"><%= error %></div>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>
+

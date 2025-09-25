@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fun Calculator (Kids)</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Fun Calculator</h1>
+
+    <form action="/calculate" method="post">
+      <div class="row">
+        <label for="num1">First number</label>
+        <input id="num1" name="num1" type="text" inputmode="decimal"
+               placeholder="e.g., 3 or 2.5" value="<%= inputs.num1 %>" required />
+      </div>
+
+      <div class="row">
+        <label for="num2">Second number</label>
+        <input id="num2" name="num2" type="text" inputmode="decimal"
+               placeholder="e.g., 4" value="<%= inputs.num2 %>" required />
+      </div>
+
+      <div class="row">
+        <label for="operation">Operation</label>
+        <select id="operation" name="operation">
+          <option value="add" <%= inputs.op === 'add' ? 'selected' : '' %>>Add (+)</option>
+          <option value="subtract" <%= inputs.op === 'subtract' ? 'selected' : '' %>>Subtract (−)</option>
+          <option value="multiply" <%= inputs.op === 'multiply' ? 'selected' : '' %>>Multiply (×)</option>
+          <option value="divide" <%= inputs.op === 'divide' ? 'selected' : '' %>>Divide (÷)</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <button type="submit">Calculate</button>
+      </div>
+    </form>
+
+    <% if (error) { %>
+      <div class="message error"><%= error %></div>
+    <% } else if (result !== null) { %>
+      <div class="message success">Result: <strong><%= result %></strong></div>
+    <% } %>
+
+    <p class="hint">Tip: decimals like 1.5 or 1,5 work. The server will show friendly errors if needed.</p>
+  </main>
+</body>
+</html>

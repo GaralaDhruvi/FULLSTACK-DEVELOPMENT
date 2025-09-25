@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://imageio.forbes.com/specials-images/dam/imageserve/1092571024/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(2px); /* Optional: adds slight blur to foreground if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: rgba(31, 31, 59, 0.9); /* Dark transparent background */
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  color: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #a866ff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task {
+  background-color: #8a2be2;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task button {
+  margin-left: 5px;
+  background: none;
+  color: white;
+  font-size: 1rem;
+}

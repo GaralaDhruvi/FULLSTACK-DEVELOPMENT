@@ -1,0 +1,42 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.input-group input {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.feedback-section, .counter-section {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.feedback-category {
+  display: inline-block;
+  width: 45%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.feedback-category button {
+  margin-top: 5px;
+  padding: 6px 12px;
+}
+
+.counter-buttons button {
+  margin-right: 10px;
+  padding: 6px 12px;
+}
